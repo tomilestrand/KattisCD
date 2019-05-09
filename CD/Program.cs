@@ -11,6 +11,7 @@ namespace CD
             HashSet<string> collection;
             string input;
             string[] parameters;
+
             while ((input = Console.ReadLine()) != "0 0")
             {
                 parameters = input.Split(' ');
@@ -20,16 +21,17 @@ namespace CD
                 matches = 0;
                 collection = new HashSet<string>();
 
-                for (; N > 0; N--)
+                while (N-- > 0)
                 {
                     collection.Add(Console.ReadLine());
                 }
 
-                for (; M > 0; M--)
+                while (M-- > 0)
                 {
                     if (collection.Contains(Console.ReadLine()))
                         matches++;
                 }
+
                 Console.WriteLine(matches);
             }
         }
