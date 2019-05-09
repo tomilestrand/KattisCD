@@ -8,7 +8,7 @@ namespace CD
         static void Main(string[] args)
         {
             int matches, N, M;
-            HashSet<string> collection;
+            HashSet<string> collection = new HashSet<string>();
             string input;
             string[] parameters;
 
@@ -19,7 +19,7 @@ namespace CD
                 M = int.Parse(parameters[1]);
 
                 matches = 0;
-                collection = new HashSet<string>();
+                collection.Clear();
 
                 while (N-- > 0)
                 {
